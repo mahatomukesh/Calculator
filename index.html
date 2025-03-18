@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <form>
+                <div class="screen">
+                    <input type="text" placeholder="0" name="display" readonly>
+                </div>
+                <div>
+                    <input type="button" value="AC" onclick= "display.value = '0' " class= "clear button">
+                    <input type="button" value="Del" onclick= "display.value = display.value.toString().slice(0,-1) " class= "clear button">
+                    <input type="button" value="." onclick= "display.value += '.' " class= "operator button">
+                    <input type="button" value="/" onclick= "display.value += '/' " class= "operator button">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick= "display.value = (display.value === '0') ? '7' : display.value += '7' " class="button">
+                    <input type="button" value="8" onclick= "display.value = (display.value === '0') ? '8' : display.value += '8' " class="button">
+                    <input type="button" value="9" onclick= "display.value = (display.value === '0') ? '9' : display.value += '9' " class="button">
+                    <input type="button" value="*" onclick= "display.value += '*' " class= "operator button">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick= "display.value = (display.value === '0') ? '4' : display.value += '4' " class="button">
+                    <input type="button" value="5" onclick= "display.value = (display.value === '0') ? '5' : display.value += '5' " class="button">
+                    <input type="button" value="6" onclick= "display.value = (display.value === '0') ? '6' : display.value += '6' " class="button">
+                    <input type="button" value="-" onclick= "display.value += '-' " class= "operator button">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick= "display.value = (display.value === '0') ? '1' : display.value += '1' " class="button">
+                    <input type="button" value="2" onclick= "display.value = (display.value === '0') ? '2' : display.value += '2' " class="button">
+                    <input type="button" value="3" onclick= "display.value = (display.value === '0') ? '3' : display.value += '3' " class="button">
+                    <input type="button" value="+" onclick= "display.value += '+' " class= "operator button">
+                </div>
+                <div>
+                    <input type="button" value="00" onclick= "if(display.value !== '0') display.value += '00' " class="button">
+                    <input type="button" value="0" onclick= "if(display.value !== '0') display.value += '0' " class="button">
+                    <input type="button" value="=" onclick= "display.value = display.value = eval(display.value)" class= "equal button">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
